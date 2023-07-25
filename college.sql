@@ -1,3 +1,4 @@
+
 create table emp2(
   eno INTEGER primary key,
   ename VARCHAR2(20) not null,
@@ -86,3 +87,33 @@ update emp set dno = 4 where eno=2;
 insert into dept values(4,"civil");
 
 insert into dept values(5,"CSE");
+
+create table courses(
+  eno integer,
+  course_name varchar(20)
+  );
+  
+ drop table courses;
+
+ 
+ ALTER TABLE emp
+ADD CONSTRAINT dno_relation
+FOREIGN KEY (dno) REFERENCES dept(dno);
+
+select count(eno) from emp;
+
+
+
+delete from emp where eno =14;
+
+
+insert into emp values(14,"person14",50000,4);
+
+
+
+
+
+
+
+
+
