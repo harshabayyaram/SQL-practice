@@ -1,0 +1,52 @@
+create table emp2(
+  eno INTEGER primary key,
+  ename VARCHAR2(20) not null,
+  sal NUMBER(8,2) not null,
+  dno INTEGER,
+  check (sal between 10000 and 50000),
+  );
+  
+ 
+  
+INSERT INTO emp2
+VALUES (12, "harsha", 50000,1);
+
+
+create table dept(
+  dno integer primary key,
+  dname varchar2(20)
+  );
+ 
+  insert into dept
+  values(3,"ECE");
+  
+
+  
+  alter table emp2 rename to emp
+  
+ 
+create table dept(
+  dno integer primary key,
+  dname varchar2(20)
+  );
+  
+create table emp2(
+  eno INTEGER primary key,
+  ename VARCHAR2(20) not null,
+  sal NUMBER(8,2) not null,
+  dno INTEGER references dept,--reffering department
+  check (sal between 10000 and 50000),
+  );
+   
+UPDATE emp
+SET dno = 2
+WHERE eno=11;
+
+
+
+update emp set eno =3  where dno =3;
+
+
+update emp set ename = "aakash" where eno=2;
+
+update emp set ename = "mahesh" where eno =3;
