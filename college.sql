@@ -1,4 +1,3 @@
-
 create table emp2(
   eno INTEGER primary key,
   ename VARCHAR2(20) not null,
@@ -110,10 +109,27 @@ delete from emp where eno =14;
 insert into emp values(14,"person14",50000,4);
 
 
+create view v_name1 as select * from emp where eno =3;
+
+
+select * from v_name;
+
+select * from v_name;
+
+
+update emp set sal=sal-1;
 
 
 
+update emp set ename = "harsha";
+
+select * from emp;
+
+update emp set sal = sal+1;
+
+update emp set ename = "aakash" where eno =2;
 
 
 
+update emp set ename ="mahesh" where eno = 3;
 
